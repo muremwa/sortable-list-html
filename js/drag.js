@@ -10,9 +10,13 @@ const liItems = (id, drgs = false) => {
     return [...home.children].filter(fFunc);
 };
 
-function getNewOrder (id) {
+function getNewOrder (id, paint = true) {
     const ids = liItems(id, true).map((child) => child.dataset.id);
-    orderSpan.innerText = ids.join(', ');
+    if (paint) {
+        orderSpan.innerText = ids.join(', ');
+    } else {
+        return ids;
+    }
 };
 
 function rearrangeItems (item) {
@@ -23,7 +27,7 @@ function rearrangeItems (item) {
             item.parentElement.appendChild(item)
         };
         toItem.classList.remove('drg-item-wild')
-        getNewOrder(mainId)
+        getNewOrder(mainId, )
     };
 };
 
