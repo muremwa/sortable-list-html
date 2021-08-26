@@ -2,6 +2,8 @@ let toItem = null;
 const mainId = 'drag-one';
 const ghost = document.getElementById('drag-ghost');
 const orderSpan = document.getElementById('order');
+
+// select items for add dragging effects
 const liItems = (id, drgs = false) => {
     const home = document.getElementById(id);
     const fFunc = drgs? (child) => child.draggable: (child) => child.classList.contains('drg-item');
