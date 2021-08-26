@@ -46,7 +46,7 @@ html {
 
 .drg-item-park {
     width: 100%;
-    height: 1em;
+    height: 0.3em;
 }
 
 .drg-item-wild > .drg-item-park {
